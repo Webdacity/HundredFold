@@ -1,0 +1,121 @@
+// Variables
+
+$grey: #151614;
+$light-grey: #efefef;
+$white: #ffffff;
+$green: #48c82a;
+$heading-font: Spartan, Tahoma, Geneva, sans-serif;
+$main-font: Roboto, Tahoma, Geneva, sans-serif;
+
+html,
+body {
+    background-color: $light-grey;
+    font-family: $main-font;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    color: $grey;
+}
+
+body {
+    position: relative;
+
+    &.no-scroll {
+        overflow: hidden;
+        height: 100%;
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s ease-out;
+    -webkit-transition: 0.3s ease-out;
+    -moz-transition: 0.3s ease-out;
+    -ms-transition: 0.3s ease-out;
+    -o-transition: 0.3s ease-out;
+}
+
+div {
+    box-sizing: border-box;
+}
+// Scollbar
+
+::-webkit-scrollbar {
+    width: 8px;
+
+    &-track {
+        background: $white;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &-thumb {
+        background: $grey;
+    }
+
+    &-thumb:hover {
+        background: $green;
+    }
+}
+
+// Container
+
+.container {
+    width: 100%;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    box-sizing: border-box;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+// Pace
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: $green;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 100%;
+    width: 100%;
+    height: 2px;
+}
