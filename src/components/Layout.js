@@ -3,7 +3,7 @@ import React from 'react';
 // Components
 import Head from "./Head";
 import Footer from "./Footer";
-import Header from "./Header";
+import Landing from "./Landing";
 
 // Fonts, Styles
 import "typeface-spartan";
@@ -15,7 +15,9 @@ export default function Layout(props) {
     return (
         <>
             <Head pageMeta={props.pageMeta}></Head>
-            <Header></Header>
+            <Landing
+                slider={props.slider}
+            />
             {props.children}
             <Footer></Footer>
         </>

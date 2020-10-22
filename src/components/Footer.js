@@ -13,16 +13,16 @@ export default function Footer() {
                     <div className={styles.nav}>
                         <Link to="/">
                             About
-                                </Link>
+                        </Link>
                         <Link to="/capabilities">
                             Capabilities
-                                </Link>
+                        </Link>
                         <Link to="/industries">
                             Industries
-                                </Link>
+                        </Link>
                         <Link to="/contact">
                             Contact
-                                </Link>
+                        </Link>
                     </div>
                 </div>
                 <div className={styles.divider} />

@@ -14,10 +14,10 @@ export default function Section(props) {
     const Heading = (props) => {
         if (props.heading) {
             return (
-                <div className={styles.heading}>
+                <header>
                     <h1>{props.heading}</h1>
                     <div></div>
-                </div>
+                </header>
             )
         }
         return null

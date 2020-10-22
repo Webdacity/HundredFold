@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, graphql } from "gatsby";
+import classNames from "classnames";
 
 // Components
 import Layout from "../components/Layout";
@@ -9,7 +10,25 @@ import ContentGrid from "../components/ContentGrid";
 // Styles, Images, Fonts
 import styles from "../styles/pages/index.module.scss";
 
-export default function About() {
+export default function About({ data }) {
+
+  const QuoteBlock = (props) => {
+    let quoteClass = classNames(
+      styles.quoteBlock,
+      styles[props.align]
+    );
+
+    return (
+      <section className={quoteClass}>
+        <div className="container">
+          <div className={styles.inner}>
+            {props.children}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <Layout
       pageMeta={{
@@ -48,38 +67,46 @@ export default function About() {
         </ContentGrid>
       </Section>
 
+      <QuoteBlock >
+        <h3>
+          We believe in the <span>Hundredfold</span> story of turning things around for good.
+        </h3>
+      </QuoteBlock>
+
       <Section      >
         <ContentGrid
           heading="The Hundredfold difference"
           contentAlign="right"
         >
-          <p>
-            <span>
-              How our work impacts on our clients is the difference we make to their bottom line, direction and efficiency:
+          <div className={styles.difference}>
+            <p>
+              <span>
+                How our work impacts on our clients is the difference we make to their bottom line, direction and efficiency:
             </span>
-          </p>
-          <ul>
-            <li>
-              <i></i>
+            </p>
+            <ul>
+              <li>
+                <span></span>
               Bringing international network of companies together to execute African centered projects
             </li>
-            <li>
-              <i></i>
+              <li>
+                <span></span>
               Driving competitively low-cost advisory business enhancing clients’ sustainability
             </li>
-            <li>
-              <i></i>
+              <li>
+                <span></span>
               Providing continuous support leading to empowered clients
             </li>
-            <li>
-              <i></i>
+              <li>
+                <span></span>
               Advancing local and internal ownership of our work
             </li>
-            <li>
-              <i></i>
+              <li>
+                <span></span>
               Assisting with quick response to difficult situations and uncertain times in complicated and complex environments
             </li>
-          </ul>
+            </ul>
+          </div>
         </ContentGrid>
       </Section>
 
@@ -105,6 +132,12 @@ export default function About() {
         </ContentGrid>
       </Section >
 
+      <QuoteBlock align="right" >
+        <h3>
+          We make <span>direct</span> contributions to groups and people in our communities we consider as vulnerable.
+        </h3>
+      </QuoteBlock>
+
       <Section>
         <ContentGrid
           heading="Social Initiatives"
@@ -126,3 +159,24 @@ export default function About() {
     </Layout >
   )
 }
+
+export const query = graphql`
+  query HomeServicesImages{
+    quote1: file(relativePath: { eq: "quotes/quote1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    quote2: file(relativePath: { eq: "quotes/quote2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

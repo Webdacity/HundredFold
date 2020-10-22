@@ -3,7 +3,7 @@
 section {
     padding: 8rem 0;
 
-    .heading {
+    header {
         margin-bottom: 3rem;
         text-align: center;
 
@@ -27,7 +27,7 @@ section {
     &.dark {
         background-color: $grey;
 
-        .heading {
+        header {
             h1 {
                 color: white;
                 font-weight: 600;

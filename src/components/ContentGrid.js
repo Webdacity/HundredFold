@@ -14,9 +14,9 @@ export default function ContentGrid(props) {
 
     return (
         <div className={contentClass}>
-            <div className={styles.heading}>
+            <header>
                 <h1>{props.heading}</h1>
-            </div>
+            </header>
             <div className={styles.text}>
                 {props.children}
             </div>
