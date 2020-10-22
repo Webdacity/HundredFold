@@ -1,0 +1,86 @@
+@import "../global.scss";
+
+footer {
+    background-color: $grey;
+    padding: 1rem 0 0.5rem 0;
+
+    .grid-upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+
+        h2 {
+            color: $white;
+            font-weight: 500;
+            font-size: 1.25rem;
+            margin: 0;
+
+            span {
+                color: $green;
+            }
+        }
+
+        .nav {
+            a {
+                color: $white;
+                text-transform: uppercase;
+                font-family: $heading-font;
+                font-weight: 600;
+                text-decoration: none;
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+                margin-right: 1.5rem;
+
+                &:hover {
+                    color: $green;
+                }
+            }
+
+            a:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .divider {
+        background-color: $light-grey;
+        height: 1.5px;
+        width: 100%;
+    }
+
+    .grid-lower {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+            color: $light-grey;
+            font-size: 0.7rem;
+            font-weight: 300;
+
+            a {
+                color: $green;
+                text-decoration: none;
+            }
+        }
+
+        .social {
+            a {
+                padding: 0.25rem;
+
+                i {
+                    color: white;
+                    font-size: 0.8rem;
+                    transition: inherit;
+                }
+
+                &:hover {
+                    i {
+                        color: $green;
+                    }
+                }
+            }
+        }
+    }
+}
