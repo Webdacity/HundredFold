@@ -7,6 +7,7 @@ import styles from "../styles/components/section.module.scss";
 export default function Section(props) {
 
     let sectionClass = classNames(
+        styles.section,
         styles[props.theme],
         styles[props.contentAlign]
     );
@@ -14,7 +15,7 @@ export default function Section(props) {
     const Heading = (props) => {
         if (props.heading) {
             return (
-                <header>
+                <header className={styles.header}>
                     <h1>{props.heading}</h1>
                     <div></div>
                 </header>

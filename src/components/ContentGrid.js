@@ -9,7 +9,8 @@ export default function ContentGrid(props) {
     let contentClass = classNames(
         styles.content,
         styles[props.theme],
-        styles[props.contentAlign]
+        styles[props.contentAlign],
+        props.capability ? styles.capability : ""
     );
 
     return (

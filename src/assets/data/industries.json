@@ -1,4 +1,45 @@
 [{
-    "name": "",
-    "description": ""
+    "name": "Public Sector",
+    "description": "Taxpayer funded State Owned Companies need strong financial return and value-for-money driven efficiency and stable governance environments ",
+    "image": "public-sector"
+}, {
+    "name": "Municipalities (Local Government)",
+    "description": "Distressed municipalities and municipalities need a strong and a committed return to operational efficiency, financial efficiency, stable and credible governance practices and achievement of service delivery outcomes. ",
+    "image": "municipalities"
+}, {
+    "name": "Telecommunications",
+    "description": "In our every changing world, where the internet of things, inter connectivity, data convergence are driving change across industries and society, telecommunications has a special offering to take people and industries through the volatility of the change. ",
+    "image": "telecommunications"
+}, {
+    "name": "Energy and the Environment ",
+    "description": "Running efficient energy producing organization that is sensitive to the ecological environment is going to be key in sustainability circles and finding the optimum balance is crucial.",
+    "image": "energy"
+}, {
+    "name": "Travel and Tourism",
+    "description": "Identifying players from customers to all layers of stakeholders that will create demand for travel and tourism locations is key to driving profitability and having the macro effect on job creation and sustainability ",
+    "image": "travel"
+}, {
+    "name": "Water and Sanitation ",
+    "description": "Innovation around water and sanitation that optimizes scarce water resources whilst at the same time creating a commercial viability of the water and sanitation sector is crucial in this present world.",
+    "image": "water"
+}, {
+    "name": "Health Care Payers, Providers and Services",
+    "description": "Health Care providers such as hospital chains are going through a phase to match increased payer scrutiny over value-for-money services and pricing of health service versus what is received by payers or patients.",
+    "image": "health"
+}, {
+    "name": "Principal Investors into Africa",
+    "description": "As an African company, we know the African story and can navigate the complex social, political, economic landscape to foreign investors who want to set up African locations for their operations.",
+    "image": "investors"
+}, {
+    "name": "Process Industries",
+    "description": "Processes define efficiency and the quality of the operating model at work. Having an operating model that is built on efficient processes can give an assurance of solid margins.",
+    "image": "process"
+}, {
+    "name": "Metals and Mining",
+    "description": "With the complexities in the mining and metals environment, driving change through data analytics can help manage complex environments.",
+    "image": "mining"
+}, {
+    "name": "Transportation and Logistics",
+    "description": "Having a margins strategy that drives profitability is key to business sustainability in sometimes depressed markets.",
+    "image": "transportation"
 }]

@@ -1,4 +1,51 @@
 [{
-    "name": "",
-    "description": ""
-}]
+        "name": "The Africa Entry Strategy",
+        "description": "As an African originated company, we believe we know the Africa story and how multinational and other international companies based in Europe, US, Asia can navigate entry into an otherwise difficult and complex African terrain. We can hand hold this entry. "
+    }, {
+        "name": "Internationalization of business",
+        "description": "Local businesses that will want to venture their presence in other countries or markets such as MENA and ASEAN and frontier markets."
+    }, {
+        "name": "Country Level Business Intelligence in Africa",
+        "description": "As an African incorporated company, we understand the political, economic, cultural and social insights that can give organizations and companies an edge in the marketplace."
+    }, {
+        "name": "Financial Management and Budgeting",
+        "description": "At Hundredfold, we have expertise that have shown and delivered value through prudent financial management guidelines that yield growth in efficiency levels and efficient management of scare resources."
+    }, {
+        "name": "Operations and Operating Model, Business Models",
+        "description": "In uncertain and changing times, an organization’s operating model can be the bulwark that secures it and guides it towards the other side of survival, leveraging on market opportunities and profitability. A legacy operating model can be the default reason for inefficiency and high operating costs. \n\nHundredfold can assist organizations and businesses that is sensitive to changing opportunities and efficiency."
+
+    }, {
+        "name": "Corporate Development",
+        "description": "Organizational culture can define the organizational development of any entity. Like we say at Hundredfold, “an organization cannot grow beyond its culture”. An organization can only grow as far as its cultures takes it. \n\nHundredfold can help small, medium organizations, government agencies, municipalities understand, and sharpen the right culture to its corporate development."
+
+    }, {
+        "name": "People strategy",
+        "description": "The people question is always an interesting and a complex one. Developing a strategy on hiring, training, management succession as it is linked to corporate performance and rewards is key to business growth."
+    }, {
+        "name": "Training and Workshop Facilitation ",
+        "description": "Receiving new knowledge is vital for any organization to face the realities of our changing world. We are able to facilitate this agenda to enrich and bring capacity to the most important resources of any organization, people! "
+    }, {
+        "name": "Digital, Technology, and Data",
+        "description": "Data analytics can unearth new competitive advantage for several industries in hospitality and tourism, retail, financial services, healthcare and other volume-based industries. Additionally, many south African organizations have not recognized their level of digital maturity to transform their operations towards sustainability."
+    }, {
+        "name": "Clean Audit Implementation Strategy for State Owned Companies and Municipalities",
+        "description": "Existing data indicate the lack or financial controls leading to material losses and material findings eroding public confidence in the operations of Municipalities, which is the centre of good governance in a centralized democracy. \n\nThe Hundredfold team has expertise that have demonstrated and achieved milestones in clean audit and good governance and can help public entities and municipalities in their quest to establish credible financial control framework and systems, financial management and procurement systems towards good governance practices and a lead towards a clean audit."
+    }, {
+        "name": "Financial Strategy",
+        "description": "Most organizations especially those in public and government sector struggle to define what the financial direction should be for the entity over and above the legislative mandate. \n\nTo be efficient, liquid, solvent and sustainable, public sector-based organizations such as SOCs and Municipalities to need figure out what is the financial strategy that will guide the organization towards efficiency, operational excellence, liquidity, solvency and sustainability."
+    }, {
+        "name": "Pricing and Margins Strategy",
+        "description": "Having a margins strategy that defines and leads the organization towards profitability is key. This will include inputs, their cost and supplier management. "
+    }, {
+        "name": "Growth",
+        "description": "During uncertain times as created by Covid-19, redefining growth and growth strategy is important for businesses to be sustainable and relevant. The Covid-19 has created new markets, new industries, new customers, whilst letting go of other customers, other markets."
+    },
+    {
+        "name": "Social Impact and Sustainability",
+        "description": "Organizations need more than just having a button-line impact, a strategy on how its engages, interact and impacts its constituencies is crucial. "
+    },
+    {
+        "name": "Scenario Planning",
+        "description": "The Before Covid-19(BC), During Covid-19( DC) and After Covid-19 (AC) scenarios presents diverse scenarios for organizations and companies to re-invent themselves and their strategies towards sustainability. "
+    }
+]

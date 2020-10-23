@@ -31,7 +31,8 @@
     "react-helmet": "^6.1.0",
     "react-slick": "^0.27.12",
     "typeface-roboto": "^1.1.13",
-    "typeface-spartan": "^1.1.13"
+    "typeface-spartan": "^1.1.13",
+    "uuid": "^8.3.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"

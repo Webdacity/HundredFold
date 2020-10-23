@@ -5,13 +5,13 @@
 
     header {
         width: 30%;
+        margin-bottom: 0;
 
         h1 {
             color: $grey;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin: 0;
-            margin-bottom: 1rem;
             font-size: 1.3rem;
             padding: 0.5rem 0;
             line-height: 1.5;
@@ -74,6 +74,34 @@
 
         .text {
             color: $light-grey;
+        }
+    }
+
+    &.capability {
+        align-items: center;
+        padding: 4rem 0;
+
+        &.dark {
+            background-color: $grey;
+        }
+
+        header {
+            height: 100%;
+
+            h1 {
+                text-transform: none;
+                font-size: 1rem;
+                letter-spacing: 0.5px;
+                border: none;
+            }
+        }
+
+        .text {
+            border-left: 2px solid $green;
+
+            p {
+                margin: 0;
+            }
         }
     }
 }

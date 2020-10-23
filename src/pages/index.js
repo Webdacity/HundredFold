@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, graphql } from "gatsby";
+import { graphql } from "gatsby";
 import classNames from "classnames";
+import Img from 'gatsby-image';
 
 // Components
 import Layout from "../components/Layout";
@@ -20,6 +21,9 @@ export default function About({ data }) {
 
     return (
       <section className={quoteClass}>
+        <div className={styles.quoteImage}>
+          {props.image === "quote1" ? <Img fluid={data.quote1.childImageSharp.fluid} /> : <Img fluid={data.quote2.childImageSharp.fluid} />}
+        </div>
         <div className="container">
           <div className={styles.inner}>
             {props.children}
@@ -67,7 +71,7 @@ export default function About({ data }) {
         </ContentGrid>
       </Section>
 
-      <QuoteBlock >
+      <QuoteBlock align="right" image="quote1">
         <h3>
           We believe in the <span>Hundredfold</span> story of turning things around for good.
         </h3>
@@ -132,7 +136,7 @@ export default function About({ data }) {
         </ContentGrid>
       </Section >
 
-      <QuoteBlock align="right" >
+      <QuoteBlock >
         <h3>
           We make <span>direct</span> contributions to groups and people in our communities we consider as vulnerable.
         </h3>

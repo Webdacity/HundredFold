@@ -30,10 +30,10 @@ export default function Footer() {
                     <p>© 2020 - Hundredfold (PTY) LTD</p>
                     <p>Design &amp; Development by <a target="blank" href="https://webdacity.dev">Webdacity</a></p>
                     <div className={styles.social}>
-                        <a href="">
+                        <a href="https://facebook.com/">
                             <i className="icon-facebook"></i>
                         </a>
-                        <a href="">
+                        <a href="https://linkedin.com/">
                             <i className="icon-linkedin"></i>
                         </a>
                     </div>
