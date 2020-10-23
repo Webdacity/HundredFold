@@ -20,7 +20,7 @@ export default function ContentGrid(props) {
     // description = description.replace("<br />", <br />)
 
     return (
-        <article className={outerClass}>
+        <article className={outerClass} id={props.heading}>
             <div className="container">
                 <div className={contentClass}>
                     <header className={styles.header}>

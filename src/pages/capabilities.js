@@ -1,7 +1,9 @@
 import React from 'react';
+import SmoothScroll from "smooth-scroll";
 
 // Components
 import Layout from "../components/Layout";
+import Landing from "../components/Landing.js";
 import Section from "../components/Section";
 import CapabilityBlock from "../components/CapabilityBlock";
 
@@ -11,7 +13,15 @@ import CapabilityData from "../assets/data/capabilities.json"
 // Styles, Images, Fonts
 import styles from "../styles/pages/capabilities.module.scss";
 
-export default function Capabilities() {
+export default function Capabilities({ data }) {
+    let scroll = new SmoothScroll('[data-scroll]');
+
+    // Slider Text
+    const slidesText = [
+        <h1> We <span>pride</span> ourselves in international networks and global collaborations</h1>,
+        <h1>Unearthing <span>insights</span> through our work</h1>
+    ]
+
     return (
         <Layout
             pageMeta={{
@@ -20,12 +30,16 @@ export default function Capabilities() {
                 canonical: "/"
             }}
         >
+
+            <Landing images={data} name="industry" slidesText={slidesText} short="Industries" multiple={true} />
+
             <Section heading="Capabilities" theme="dark" >
                 <div className={styles.menuGrid}>
                     {CapabilityData.map((capability, index) => {
+                        let anchorLink = `#${capability.name}`;
                         return (
                             <div key={index} className={styles.menuItem}>
-                                <a href="#">{capability.name}</a>
+                                <a data-scroll href={anchorLink}>{capability.name}</a>
                             </div>
                         )
                     })}
@@ -61,3 +75,16 @@ export default function Capabilities() {
         </Layout>
     )
 }
+
+export const query = graphql`
+  query CapabilitySlideImages{
+    slide1: file(relativePath: { eq: "slides/capabilities/slide1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

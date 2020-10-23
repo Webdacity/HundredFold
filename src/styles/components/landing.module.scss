@@ -1,72 +1,64 @@
 @import "../global.scss";
 
 .landing {
-    min-height: 100vh;
-    position: relative;
+    height: 100vh;
     background-color: $grey;
 
-    header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        box-sizing: border-box;
-        z-index: 50;
-        padding: 2rem;
+    .slide {
+        height: 100vh;
 
-        nav {
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(21, 22, 20, 0.75);
+            z-index: 2;
+        }
+
+        .content {
+            z-index: 3;
+            position: relative;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            width: 60%;
+            height: 100%;
+            padding: 0 0 0 4rem;
+            color: $white;
 
-            .logo {
-                width: 11rem;
-
-                img {
-                    width: 100%;
-                }
+            h6 {
+                border-left: 3px solid $green;
+                font-size: 0.8rem;
+                padding-left: 1rem;
+                margin: 0;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 0.5rem;
+                font-weight: 600;
             }
 
-            .list {
-                display: flex;
-                list-style: none;
-                padding: 0;
-                margin: 0;
+            h1 {
+                font-weight: 600;
+                font-size: 2rem;
+                text-transform: uppercase;
+                line-height: 1.6;
+                margin: 1rem 0;
+                letter-spacing: 0.5px;
 
-                a {
-                    margin-right: 3rem;
-                    text-decoration: none;
-                    font-family: $heading-font;
-                    font-size: 0.8rem;
-                    letter-spacing: 2px;
-                    color: $white;
-                    font-weight: 600;
-                    letter-spacing: 0.5px;
-                    text-transform: uppercase;
-
-                    &:after {
-                        content: "";
-                        display: block;
-                        margin: auto;
-                        margin-top: 0.5rem;
-                        height: 2px;
-                        width: 0px;
-                        background: transparent;
-                        transition: width 0.2s ease-out, background-color 0.3s ease;
-                        -webkit-transition: width 0.2s ease-out, background-color 0.3s ease;
-                        -moz-transition: width 0.2s ease-out, background-color 0.3s ease;
-                        -ms-transition: width 0.2s ease-out, background-color 0.3s ease;
-                        -o-transition: width 0.2s ease-out, background-color 0.3s ease;
-                    }
-
-                    &:hover:after {
-                        width: 100%;
-                        background: $green;
-                    }
-                }
-
-                a:last-child {
-                    margin-right: 0;
+                span {
+                    font-weight: 700;
+                    color: $green;
                 }
             }
         }

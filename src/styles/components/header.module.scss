@@ -1,0 +1,68 @@
+@import "../global.scss";
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 50;
+    padding: 2rem;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 11rem;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .list {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            a {
+                margin-right: 3rem;
+                text-decoration: none;
+                font-family: $heading-font;
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+                color: $white;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+
+                &:after {
+                    content: "";
+                    display: block;
+                    margin: auto;
+                    margin-top: 0.5rem;
+                    height: 2px;
+                    width: 0px;
+                    background: transparent;
+                    transition: width 0.2s ease-out, background-color 0.3s ease;
+                    -webkit-transition: width 0.2s ease-out, background-color 0.3s ease;
+                    -moz-transition: width 0.2s ease-out, background-color 0.3s ease;
+                    -ms-transition: width 0.2s ease-out, background-color 0.3s ease;
+                    -o-transition: width 0.2s ease-out, background-color 0.3s ease;
+                }
+
+                &:hover:after {
+                    width: 100%;
+                    background: $green;
+                }
+            }
+
+            a:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

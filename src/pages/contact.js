@@ -2,12 +2,16 @@ import React from 'react';
 
 // Components
 import Layout from "../components/Layout";
-import Section from "../components/Section";
+import Landing from "../components/Landing.js";
 
 // Styles, Images, Fonts
 import styles from "../styles/pages/contact.module.scss";
 
-export default function Contact() {
+export default function Contact({ data }) {
+
+    // Slider Text
+    const slidesText = [<h1> Looking for a <span>strategy company</span> to drive your african ventures?</h1>]
+
     return (
         <Layout
             pageMeta={{
@@ -16,6 +20,9 @@ export default function Contact() {
                 canonical: "/"
             }}
         >
+
+            <Landing images={data} name="contact" slidesText={slidesText} short="Contact Us" multiple={true} />
+
             <section>
                 <div className="container">
                     <div className={styles.grid}>
@@ -82,7 +89,29 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+                <div className={styles.map}>
+                    <iframe title="map" src="https://snazzymaps.com/embed/269673"></iframe>
+                </div>
+
+
+
+
+
+
             </section>
         </Layout>
     )
 }
+
+export const query = graphql`
+  query ContactSlideImages{
+    slide1: file(relativePath: { eq: "slides/contact/slide1.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`

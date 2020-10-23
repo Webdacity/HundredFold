@@ -5,6 +5,7 @@ import Img from 'gatsby-image';
 
 // Components
 import Layout from "../components/Layout";
+import Landing from "../components/Landing.js";
 import Section from "../components/Section";
 import ContentGrid from "../components/ContentGrid";
 
@@ -13,16 +14,27 @@ import styles from "../styles/pages/index.module.scss";
 
 export default function About({ data }) {
 
+  // Slider Text
+  const slidesText = [<h1> An <span>Africa Focused</span> Strategy Company</h1>]
+
   const QuoteBlock = (props) => {
     let quoteClass = classNames(
       styles.quoteBlock,
       styles[props.align]
     );
 
+    const wrapperStyles = {
+      height: '100%',
+    }
+
+    const imageStyles = {
+      objectPosition: "left center"
+    }
+
     return (
       <section className={quoteClass}>
         <div className={styles.quoteImage}>
-          {props.image === "quote1" ? <Img fluid={data.quote1.childImageSharp.fluid} /> : <Img fluid={data.quote2.childImageSharp.fluid} />}
+          {props.image === "quote1" ? <Img fluid={data.quote1.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} /> : <Img fluid={data.quote2.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />}
         </div>
         <div className="container">
           <div className={styles.inner}>
@@ -41,6 +53,8 @@ export default function About({ data }) {
         canonical: "/"
       }}
     >
+
+      <Landing images={data} name="about" slidesText={slidesText} short="About Us" multiple={true} />
 
       <Section heading="About Us" >
         <div className={styles.about}>
@@ -175,6 +189,14 @@ export const query = graphql`
       }
     }
     quote2: file(relativePath: { eq: "quotes/quote2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    slide1: file(relativePath: { eq: "slides/about/slide1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 80) {
           ...GatsbyImageSharpFluid
