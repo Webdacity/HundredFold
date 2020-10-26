@@ -75,16 +75,16 @@ export default function Header() {
             </nav>
             <nav className={styles.mobileNav} id="mobile-nav">
                 <div className={styles.list}>
-                    <Link to="/" className={styles.item} onClick={closeNav}>
+                    <Link to="/" className={styles.item} onClick={toggleNav}>
                         About
                         </Link>
-                    <Link to="/capabilities" className={styles.item} onClick={closeNav}>
+                    <Link to="/capabilities" className={styles.item} onClick={toggleNav}>
                         Capabilities
                         </Link>
-                    <Link to="/industries" className={styles.item} onClick={closeNav}>
+                    <Link to="/industries" className={styles.item} onClick={toggleNav}>
                         Industries
                         </Link>
-                    <Link to="/contact" className={styles.item} onClick={closeNav}>
+                    <Link to="/contact" className={styles.item} onClick={toggleNav}>
                         Contact
                         </Link>
                 </div>
