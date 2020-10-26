@@ -60,6 +60,7 @@
         padding: 6rem 0;
         width: 100%;
         z-index: 5;
+        background-color: rgba(21, 22, 20, 0.5);
 
         .inner {
             display: flex;
@@ -93,13 +94,14 @@
 
     @media (max-width: 768px) {
         .overlay {
-            background-color: rgba(21, 22, 20, 0.6);
+            background-color: rgba(21, 22, 20, 0.75);
 
             .inner {
                 justify-content: center !important;
                 h3 {
                     text-align: center;
                     width: unset;
+                    line-height: 1.75;
                 }
             }
         }

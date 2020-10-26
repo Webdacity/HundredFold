@@ -1,12 +1,4 @@
 [{
-    "name": "Public Sector",
-    "description": "Taxpayer funded State Owned Companies need strong financial return and value-for-money driven efficiency and stable governance environments ",
-    "image": "public-sector"
-}, {
-    "name": "Municipalities (Local Government)",
-    "description": "Distressed municipalities and municipalities need a strong and a committed return to operational efficiency, financial efficiency, stable and credible governance practices and achievement of service delivery outcomes. ",
-    "image": "municipalities"
-}, {
     "name": "Telecommunications",
     "description": "In our every changing world, where the internet of things, inter connectivity, data convergence are driving change across industries and society, telecommunications has a special offering to take people and industries through the volatility of the change. ",
     "image": "telecommunications"
@@ -29,7 +21,7 @@
 }, {
     "name": "Principal Investors into Africa",
     "description": "As an African company, we know the African story and can navigate the complex social, political, economic landscape to foreign investors who want to set up African locations for their operations.",
-    "image": "investors"
+    "image": "africa"
 }, {
     "name": "Process Industries",
     "description": "Processes define efficiency and the quality of the operating model at work. Having an operating model that is built on efficient processes can give an assurance of solid margins.",
@@ -42,4 +34,12 @@
     "name": "Transportation and Logistics",
     "description": "Having a margins strategy that drives profitability is key to business sustainability in sometimes depressed markets.",
     "image": "transportation"
+}, {
+    "name": "Public Sector",
+    "description": "Taxpayer funded State Owned Companies need strong financial return and value-for-money driven efficiency and stable governance environments ",
+    "image": "public-sector"
+}, {
+    "name": "Municipalities (Local Government)",
+    "description": "Distressed municipalities and municipalities need a strong and a committed return to operational efficiency, financial efficiency, stable and credible governance practices and achievement of service delivery outcomes. ",
+    "image": "municipalities"
 }]

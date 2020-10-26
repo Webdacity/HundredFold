@@ -21,20 +21,25 @@ export default function About({ data }) {
     let quoteClass = classNames(
       styles.quoteBlock,
       styles[props.align]
+
     );
 
     const wrapperStyles = {
       height: '100%',
     }
 
-    const imageStyles = {
+    const quote1ImgStyle = {
       objectPosition: "left center"
+    }
+
+    const quote2ImgStyle = {
+      objectPosition: "right center"
     }
 
     return (
       <section className={quoteClass}>
         <div className={styles.quoteImage}>
-          {props.image === "quote1" ? <Img fluid={data.quote1.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} /> : <Img fluid={data.quote2.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />}
+          {props.image === "quote1" ? <Img fluid={data.quote1.childImageSharp.fluid} style={wrapperStyles} imgStyle={quote1ImgStyle} /> : <Img fluid={data.quote2.childImageSharp.fluid} style={wrapperStyles} imgStyle={quote2ImgStyle} />}
         </div>
         <div className={styles.overlay}>
           <div className="container">
@@ -137,6 +142,7 @@ export default function About({ data }) {
           heading="Our Leadership"
           contentAlign="left"
           theme="dark"
+          image={data.godwin}
         >
           <p>
             Hundredfold was founded to impact the real and every day needs of businesses and organizations in Africa to survive and grow by its Founder, Godwin Hatekah.
@@ -201,6 +207,14 @@ export const query = graphql`
     slide: file(relativePath: { eq: "slides/about/slide1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 80) {
+          ...GatsbyImageSharpFluid
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    godwin: file(relativePath: { eq: "other/godwin.jpeg" }) {
+      childImageSharp {
+        fluid(maxWidth: 500, quality: 80) {
           ...GatsbyImageSharpFluid
           ...GatsbyImageSharpFluid_withWebp
         }

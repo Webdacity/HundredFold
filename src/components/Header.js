@@ -36,11 +36,11 @@ export default function Header() {
     const closeNav = () => {
 
         let body = document.getElementsByTagName('body')[0];
-        body.classList.remove("noscroll");
+        body.classList.toggle("noscroll");
 
-        let nav = document.getElementsByClassName('mobile-nav')[0];
-        nav.classList.remove("closed");
-        nav.classList.remove("open");
+        let nav = document.getElementById('mobile-nav');
+        nav.classList.remove(styles.closed);
+        nav.classList.remove(styles.open);
     }
 
 
@@ -75,16 +75,16 @@ export default function Header() {
             </nav>
             <nav className={styles.mobileNav} id="mobile-nav">
                 <div className={styles.list}>
-                    <Link to="/" className={styles.item}>
+                    <Link to="/" className={styles.item} onClick={closeNav}>
                         About
                         </Link>
-                    <Link to="/capabilities" className={styles.item}>
+                    <Link to="/capabilities" className={styles.item} onClick={closeNav}>
                         Capabilities
                         </Link>
-                    <Link to="/industries" className={styles.item}>
+                    <Link to="/industries" className={styles.item} onClick={closeNav}>
                         Industries
                         </Link>
-                    <Link to="/contact" className={styles.item}>
+                    <Link to="/contact" className={styles.item} onClick={closeNav}>
                         Contact
                         </Link>
                 </div>
