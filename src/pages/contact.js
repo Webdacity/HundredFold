@@ -1,5 +1,7 @@
 import React from 'react';
 import classNames from "classnames";
+import { graphql } from "gatsby";
+
 
 // Components
 import Layout from "../components/Layout";
@@ -41,25 +43,32 @@ export default function Contact({ data }) {
                             </header>
                             <div className={styles.group}>
                                 <h5>Call Us</h5>
-                                <a href="tel:+27 79 549 1195">
-                                    <i className="icon-circle"></i>
-                                    +27 79 549 1195
+                                <div>
+                                    <a href="tel:+27 79 549 1195">
+                                        +27 79 549 1195
                                     </a>
+                                    <i className="icon-circle"></i>
+                                </div>
                             </div>
                             <div className={styles.group}>
                                 <h5>Email Us</h5>
-                                <a href="mailto:clientsservice@hundredfold.co.za">
-                                    <i className="icon-circle"></i>
-                                    clientsservice@hundredfold.co.za
+                                <div>
+                                    <a href="mailto:clientsservice@hundredfold.co.za">
+                                        clientsservice@hundredfold.co.za
                                     </a>
+                                    <i className="icon-circle"></i>
+                                </div>
                             </div>
                             <div className={styles.group}>
                                 <h5>Find Us</h5>
-                                <a href="https://g.page/Atrium-on-5th-4721?share" target="blank">
-                                    <i className="icon-circle"></i>
-                                    Atrium on 5th, 9th Floor, 5th Street <br />
+                                <div>
+                                    <a href="https://g.page/Atrium-on-5th-4721?share" target="blank">
+                                        Atrium on 5th, 9th Floor, 5th Street <br />
                                         Sandton, Johannesburg, 2196, South Africa
                                     </a>
+                                    <i className="icon-circle"></i>
+                                </div>
+
                             </div>
                             <div className={styles.group}>
                                 <h5>Follow Us</h5>

@@ -8,7 +8,7 @@ import styles from "../styles/components/industry-block.module.scss";
 // import image from "../assets/images/indust/service.jpg"
 
 export default function IndustryBlock(props) {
-    const data = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     query IndustryImages {
       allFile(filter: {ext: {regex: "/(jpg)/"}, relativeDirectory: {eq: "industries"}}) {
         edges {
@@ -31,25 +31,26 @@ export default function IndustryBlock(props) {
     }
     `)
 
-    const getImage = (name) => {
-        let edges = data.allFile.edges;
-        const item = edges.find(item => item.node.name === name);
-        if (item) {
-            return item.node.childImageSharp.fluid
-        }
+  const getImage = (name) => {
+    let edges = data.allFile.edges;
+    const item = edges.find(item => item.node.name === name);
+    if (item) {
+      return item.node.childImageSharp.fluid
     }
+  }
 
-    const image = getImage(props.image);
+  const image = getImage(props.image);
 
-    return (
-        <article className={styles.block}>
-            <div className={styles.image}>
-                <Img fluid={image} />
-            </div>
-            <h4>
-                <i className="icon-circle"></i>
-                {props.name}</h4>
-            <p>{props.description}</p>
-        </article>
-    )
+  return (
+    <article className={styles.block}>
+      <div className={styles.image}>
+        <Img fluid={image} />
+      </div>
+      <div className={styles.name}>
+        <i className="icon-circle"></i>
+        <h4>{props.name}</h4>
+      </div>
+      <p>{props.description}</p>
+    </article>
+  )
 }

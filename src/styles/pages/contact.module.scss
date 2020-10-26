@@ -46,10 +46,11 @@
                 font-size: 0.9rem;
             }
 
-            a {
-                color: $grey;
-                text-decoration: none;
-                display: inline-block;
+            div {
+                display: flex;
+                flex-direction: row-reverse;
+                justify-content: flex-end;
+                align-items: center;
 
                 i {
                     display: inline-block;
@@ -61,8 +62,11 @@
                     opacity: 0;
                 }
 
-                &:hover {
-                    i {
+                a {
+                    color: $grey;
+                    text-decoration: none;
+
+                    &:hover + i {
                         width: 1rem;
                         margin-right: 0.75rem;
                         opacity: 1;

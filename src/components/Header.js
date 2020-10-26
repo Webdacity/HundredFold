@@ -47,7 +47,7 @@ export default function Header() {
     return (
         <header>
             <nav className={styles.navbar}>
-                <div className={styles.logo} onClick={closeNav}>
+                <div className={styles.logo} onClick={closeNav} >
                     <img src={NavbarLogo} alt="Hundredfold Navbar Logo" />
                 </div>
                 <div className={styles.list}>
