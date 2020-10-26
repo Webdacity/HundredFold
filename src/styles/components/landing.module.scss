@@ -70,17 +70,19 @@
                 border: 1.5px solid white;
                 border-radius: 0.25rem;
                 transition: 0.3s ease-out;
+                padding: 0;
 
                 a {
-                    display: inline-block;
+                    display: block;
                     color: white;
                     text-decoration: none;
                     text-transform: uppercase;
                     font-family: $heading-font;
-                    letter-spacing: 1.5px;
+                    letter-spacing: 1px;
                     font-size: 0.75rem;
                     font-weight: 600;
-                    padding: 0.5rem 1rem;
+                    padding: 0.75rem 1.25rem;
+                    line-height: 1;
                 }
 
                 &:hover {
