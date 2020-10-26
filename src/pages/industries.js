@@ -25,7 +25,7 @@ export default function Industries({ data }) {
     <Layout
       pageMeta={{
         title: "Industries",
-        description: "An Africa Focused Strategy Company",
+        description: "We pride ourselves in international networks and global collaborations",
         canonical: "/"
       }}
     >

@@ -14,7 +14,7 @@ import styles from "../styles/pages/capabilities.module.scss";
 export default function Capabilities({ data }) {
     // Slider Text
     const slidesText = [
-        <h1> We <span>pride</span> ourselves in international networks and global collaborations</h1>,
+        <h1> We believe in <span>driving change</span> through strong networks in Africa</h1>,
         <h1>Unearthing <span>insights</span> through our work</h1>,
         <h1>Delivering value through <span>cost efficiency</span></h1>
     ]
@@ -23,7 +23,7 @@ export default function Capabilities({ data }) {
         <Layout
             pageMeta={{
                 title: "Capabilities",
-                description: "An Africa Focused Strategy Company",
+                description: "We believe in driving change through strong networks in Africa",
                 canonical: "/"
             }}
         >

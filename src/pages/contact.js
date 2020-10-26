@@ -23,7 +23,7 @@ export default function Contact({ data }) {
         <Layout
             pageMeta={{
                 title: "Contact",
-                description: "An Africa Focused Strategy Company",
+                description: "Get in touch with us to learn more.",
                 canonical: "/"
             }}
         >

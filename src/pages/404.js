@@ -13,7 +13,6 @@ export default function PageNotFound() {
                 title: "Page not Found",
                 description: "Page not Found",
                 robots: "noindex, nofollow"
-
             }}
         >
 
