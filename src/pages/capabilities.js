@@ -14,7 +14,7 @@ import CapabilityData from "../assets/data/capabilities.json"
 import styles from "../styles/pages/capabilities.module.scss";
 
 export default function Capabilities({ data }) {
-    let scroll = new SmoothScroll('[data-scroll]');
+    // let scroll = new SmoothScroll('[data-scroll]');
 
     // Slider Text
     const slidesText = [
