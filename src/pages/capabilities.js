@@ -1,6 +1,4 @@
 import React from 'react';
-import SmoothScroll from "smooth-scroll";
-
 // Components
 import Layout from "../components/Layout";
 import Landing from "../components/Landing.js";
@@ -14,8 +12,6 @@ import CapabilityData from "../assets/data/capabilities.json"
 import styles from "../styles/pages/capabilities.module.scss";
 
 export default function Capabilities({ data }) {
-    // let scroll = new SmoothScroll('[data-scroll]');
-
     // Slider Text
     const slidesText = [
         <h1> We <span>pride</span> ourselves in international networks and global collaborations</h1>,

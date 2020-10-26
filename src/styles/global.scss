@@ -7,6 +7,10 @@ $green: #48c82a;
 $heading-font: Spartan, Tahoma, Geneva, sans-serif;
 $main-font: Roboto, Tahoma, Geneva, sans-serif;
 
+html {
+    scroll-behavior: smooth;
+}
+
 html,
 body {
     background-color: $light-grey;
