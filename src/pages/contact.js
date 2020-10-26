@@ -1,4 +1,5 @@
 import React from 'react';
+import classNames from "classnames";
 
 // Components
 import Layout from "../components/Layout";
@@ -12,6 +13,12 @@ export default function Contact({ data }) {
     // Slider Text
     const slidesText = [<h1> Looking for a <span>strategy company</span> to drive your african ventures?</h1>]
 
+    let containerClass = classNames(
+        "container",
+        styles.container
+    );
+
+
     return (
         <Layout
             pageMeta={{
@@ -21,10 +28,10 @@ export default function Contact({ data }) {
             }}
         >
 
-            <Landing images={data} name="contact" slidesText={slidesText} short="Contact Us" multiple={true} />
+            <Landing image={data.slide} name="contact" slidesText={slidesText} short="Contact Us" multiple={true} />
 
             <section>
-                <div className="container">
+                <div className={containerClass}>
                     <div className={styles.grid}>
                         <div className={styles.details}>
                             <header className={styles.header}>
@@ -35,21 +42,21 @@ export default function Contact({ data }) {
                             <div className={styles.group}>
                                 <h5>Call Us</h5>
                                 <a href="tel:+27 79 549 1195">
-                                    <span></span>
+                                    <i className="icon-circle"></i>
                                     +27 79 549 1195
                                     </a>
                             </div>
                             <div className={styles.group}>
                                 <h5>Email Us</h5>
                                 <a href="mailto:clientsservice@hundredfold.co.za">
-                                    <span></span>
+                                    <i className="icon-circle"></i>
                                     clientsservice@hundredfold.co.za
                                     </a>
                             </div>
                             <div className={styles.group}>
                                 <h5>Find Us</h5>
                                 <a href="https://g.page/Atrium-on-5th-4721?share" target="blank">
-                                    <span></span>
+                                    <i className="icon-circle"></i>
                                     Atrium on 5th, 9th Floor, 5th Street <br />
                                         Sandton, Johannesburg, 2196, South Africa
                                     </a>
@@ -105,7 +112,7 @@ export default function Contact({ data }) {
 
 export const query = graphql`
   query ContactSlideImages{
-    slide1: file(relativePath: { eq: "slides/contact/slide1.jpg" }) {
+    slide: file(relativePath: { eq: "slides/contact/slide1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 80) {
           ...GatsbyImageSharpFluid

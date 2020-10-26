@@ -36,9 +36,11 @@ export default function About({ data }) {
         <div className={styles.quoteImage}>
           {props.image === "quote1" ? <Img fluid={data.quote1.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} /> : <Img fluid={data.quote2.childImageSharp.fluid} style={wrapperStyles} imgStyle={imageStyles} />}
         </div>
-        <div className="container">
-          <div className={styles.inner}>
-            {props.children}
+        <div className={styles.overlay}>
+          <div className="container">
+            <div className={styles.inner}>
+              {props.children}
+            </div>
           </div>
         </div>
       </section>
@@ -54,7 +56,7 @@ export default function About({ data }) {
       }}
     >
 
-      <Landing images={data} name="about" slidesText={slidesText} short="About Us" multiple={true} />
+      <Landing image={data.slide} name="about" slidesText={slidesText} short="About Us" multiple={true} linkTo="/contact" linkText="Get in Touch" align="right" />
 
       <Section heading="About Us" >
         <div className={styles.about}>
@@ -196,7 +198,7 @@ export const query = graphql`
         }
       }
     }
-    slide1: file(relativePath: { eq: "slides/about/slide1.jpg" }) {
+    slide: file(relativePath: { eq: "slides/about/slide1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 80) {
           ...GatsbyImageSharpFluid

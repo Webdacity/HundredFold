@@ -2,6 +2,8 @@ import React from 'react';
 import Slider from "react-slick";
 import Img from 'gatsby-image';
 import { Link } from "gatsby";
+import classNames from "classnames";
+
 
 // Styles, Images, Fonts
 import styles from "../styles/components/landing.module.scss";
@@ -16,28 +18,32 @@ export default function Landing(props) {
         height: '100%',
     }
 
-    const images = props.images;
+    const image = props.image;
 
     const Slide = (props) => {
-        let slideNumber = `slide${props.number + 1}`;
-        console.log(slideNumber)
+        const slideClass = classNames(
+            styles.slide,
+            styles[props.align],
+        )
 
         return (
-            <div className={styles.slide} >
-                <div className={styles.image}>
-                    <Img fluid={images.slide1.childImageSharp.fluid} style={wrapperStyles} />
-                </div>
-                <div className={styles.overlay}></div>
-                <div className={styles.content}>
-                    <h6>
-                        {props.short}
-                    </h6>
-                    {props.text}
-                    {/* <button className="button">
-                        <Link to={props.linkTo}>
-                            {props.linkText}
-                        </Link>
-                    </button> */}
+            <div className={slideClass} >
+                <div className={styles.overlay}>
+                    <div className={styles.content}>
+                        <div className={styles.inner}>
+                            <h6>
+                                {props.short}
+                            </h6>
+                            {props.text}
+                            {props.linkTo ?
+                                <button className={styles.button}>
+                                    <Link to={props.linkTo}>
+                                        {props.linkText}
+                                    </Link>
+                                </button>
+                                : null}
+                        </div>
+                    </div>
                 </div>
             </div>
         )
@@ -49,12 +55,12 @@ export default function Landing(props) {
             var settings = {
                 dots: false,
                 infinite: true,
-                speed: 500,
+                speed: 1000,
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 arrows: false,
-                // autoplay: true,
-                // autoplaySpeed: 5000,
+                autoplay: true,
+                autoplaySpeed: 5000,
                 draggable: true,
                 cssEase: "linear",
                 pauseOnHover: true,
@@ -67,7 +73,7 @@ export default function Landing(props) {
                             return (
                                 <div key={index}>
                                     <Slide
-                                        short={props.short}
+                                        {...props}
                                         text={text}
                                         number={index}
                                     />
@@ -82,6 +88,9 @@ export default function Landing(props) {
 
     return (
         <header className={styles.landing}>
+            <div className={styles.image}>
+                <Img fluid={image.childImageSharp.fluid} style={wrapperStyles} />
+            </div>
             <LandingSlider />
         </header>
     )

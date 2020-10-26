@@ -51,20 +51,21 @@
                 text-decoration: none;
                 display: inline-block;
 
-                span {
+                i {
                     display: inline-block;
-                    height: 0.75rem;
-                    background-color: $green;
-                    border-radius: 50%;
-                    width: 0;
+                    font-size: 1rem;
+                    color: $green;
                     overflow: hidden;
                     transition: 0.3s ease-out;
+                    width: 0;
+                    opacity: 0;
                 }
 
                 &:hover {
-                    span {
-                        width: 0.75rem;
+                    i {
+                        width: 1rem;
                         margin-right: 0.75rem;
+                        opacity: 1;
                     }
                 }
             }
@@ -188,6 +189,21 @@
             }
         }
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 4rem;
+
+        .details {
+            width: 100%;
+            padding-right: 0;
+            padding-bottom: 0;
+        }
+
+        .form {
+            width: 100%;
+        }
+    }
 }
 
 .map {
@@ -198,5 +214,17 @@
         border: none;
         width: 100%;
         height: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0;
+    }
+
+    .grid {
+        .details {
+            padding: 6rem 2rem 0 2rem;
+        }
     }
 }

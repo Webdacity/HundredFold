@@ -17,7 +17,8 @@ export default function Industries({ data }) {
   const slidesText =
     [
       <h1> We <span>pride</span> ourselves in international networks and global collaborations</h1>,
-      <h1>Driving change through <span>ethics</span></h1>
+      <h1>Driving change through <span>ethics</span></h1>,
+      <h1>Spotting emerging events for <span>opportunities</span></h1>
     ]
 
   return (
@@ -29,7 +30,7 @@ export default function Industries({ data }) {
       }}
     >
 
-      <Landing images={data} name="industry" slidesText={slidesText} short="Industries" multiple={true} />
+      <Landing image={data.slide} name="industry" slidesText={slidesText} short="Industries" multiple={true} linkTo="/contact" linkText="Get in Touch" align="right" />
 
       <Section heading="Industries" >
         <div className={styles.grid}>
@@ -50,7 +51,7 @@ export default function Industries({ data }) {
 
 export const query = graphql`
   query IndustrySlideImages{
-    slide1: file(relativePath: { eq: "slides/industries/slide1.jpg" }) {
+    slide: file(relativePath: { eq: "slides/industries/slide1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 80) {
           ...GatsbyImageSharpFluid

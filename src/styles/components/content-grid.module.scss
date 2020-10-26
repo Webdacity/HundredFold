@@ -3,8 +3,8 @@
 .content {
     display: flex;
 
-    header {
-        width: 30%;
+    .header {
+        width: 35%;
         margin-bottom: 0;
 
         h1 {
@@ -19,7 +19,7 @@
     }
 
     .text {
-        width: 70%;
+        width: 75%;
 
         p:first-child {
             margin-top: 0;
@@ -31,9 +31,8 @@
     }
 
     &.right {
-        header {
+        .header {
             text-align: right;
-            padding-right: 1.5rem;
 
             h1 {
                 border-right: 2px solid $green;
@@ -49,8 +48,7 @@
     &.left {
         flex-direction: row-reverse;
 
-        header {
-            padding-left: 1.5rem;
+        .header {
             text-align: left;
 
             h1 {
@@ -66,7 +64,7 @@
     }
 
     &.dark {
-        header {
+        .header {
             h1 {
                 color: $white;
             }
@@ -85,7 +83,7 @@
             background-color: $grey;
         }
 
-        header {
+        .header {
             height: 100%;
 
             h1 {
@@ -101,6 +99,48 @@
 
             p {
                 margin: 0;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        row-gap: 2rem;
+
+        .header {
+            width: 100%;
+        }
+
+        .text {
+            width: 100%;
+            padding: 0 !important;
+        }
+
+        &.right {
+            .header {
+                text-align: left;
+
+                h1 {
+                    padding: 0;
+                    border: none;
+                    border-left: 2px solid $green;
+                    padding-left: 1.5rem;
+                }
+            }
+        }
+
+        &.left {
+            flex-direction: column;
+
+            .header {
+                text-align: right;
+
+                h1 {
+                    padding: 0;
+                    border: none;
+                    border-right: 2px solid $green;
+                    padding-right: 1.5rem;
+                }
             }
         }
     }

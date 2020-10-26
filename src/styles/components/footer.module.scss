@@ -3,6 +3,7 @@
 footer {
     background-color: $grey;
     padding: 1rem 0 0.5rem 0;
+    box-sizing: border-box;
 
     .grid-upper {
         display: flex;
@@ -53,11 +54,14 @@ footer {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding: 0.5rem 0;
+        box-sizing: border-box;
 
         p {
             color: $light-grey;
             font-size: 0.7rem;
             font-weight: 300;
+            margin: 0;
 
             a {
                 color: $green;
@@ -78,6 +82,60 @@ footer {
                 &:hover {
                     i {
                         color: $green;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .grid-upper {
+            flex-direction: column;
+            row-gap: 1.5rem;
+
+            .nav {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                a {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 576px) {
+        .grid-upper {
+            flex-direction: column;
+            row-gap: 1.5rem;
+
+            .nav {
+                display: none;
+            }
+        }
+
+        .grid-lower {
+            flex-direction: column;
+            row-gap: 0.25rem;
+
+            p:nth-child(1) {
+                order: 2;
+            }
+
+            p:nth-child(2) {
+                order: 3;
+            }
+
+            .social {
+                order: 1;
+                padding: 0.25rem 0;
+
+                a {
+                    padding: 0.5rem;
+
+                    i {
+                        font-size: 0.9rem;
                     }
                 }
             }

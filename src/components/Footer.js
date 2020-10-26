@@ -10,7 +10,7 @@ export default function Footer() {
             <div className="container">
                 <div className={styles.gridUpper}>
                     <h2>Hundred<span>Fold</span></h2>
-                    <div className={styles.nav}>
+                    <nav className={styles.nav}>
                         <Link to="/">
                             About
                         </Link>
@@ -23,7 +23,7 @@ export default function Footer() {
                         <Link to="/contact">
                             Contact
                         </Link>
-                    </div>
+                    </nav>
                 </div>
                 <div className={styles.divider} />
                 <div className={styles.gridLower}>

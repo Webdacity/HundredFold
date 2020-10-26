@@ -11,7 +11,9 @@ export default function IndustryBlock(props) {
             <div className={styles.image}>
                 <img src={image} alt="" />
             </div>
-            <h4><span></span>{props.name}</h4>
+            <h4>
+                <i className="icon-circle"></i>
+                {props.name}</h4>
             <p>{props.description}</p>
         </article>
     )

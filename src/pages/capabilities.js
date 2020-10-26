@@ -19,7 +19,8 @@ export default function Capabilities({ data }) {
     // Slider Text
     const slidesText = [
         <h1> We <span>pride</span> ourselves in international networks and global collaborations</h1>,
-        <h1>Unearthing <span>insights</span> through our work</h1>
+        <h1>Unearthing <span>insights</span> through our work</h1>,
+        <h1>Delivering value through <span>cost efficiency</span></h1>
     ]
 
     return (
@@ -31,7 +32,7 @@ export default function Capabilities({ data }) {
             }}
         >
 
-            <Landing images={data} name="industry" slidesText={slidesText} short="Industries" multiple={true} />
+            <Landing image={data.slide} name="industry" slidesText={slidesText} short="Our Capabilities" multiple={true} linkTo="/contact" linkText="Get in Touch" />
 
             <Section heading="Capabilities" theme="dark" >
                 <div className={styles.menuGrid}>
@@ -78,7 +79,7 @@ export default function Capabilities({ data }) {
 
 export const query = graphql`
   query CapabilitySlideImages{
-    slide1: file(relativePath: { eq: "slides/capabilities/slide1.jpg" }) {
+    slide: file(relativePath: { eq: "slides/capabilities/slide1.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1920, quality: 80) {
           ...GatsbyImageSharpFluid
