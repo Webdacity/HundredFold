@@ -44,8 +44,8 @@ export default function Contact({ data }) {
                             <div className={styles.group}>
                                 <h5>Call Us</h5>
                                 <div>
-                                    <a href="tel:+27 79 549 1195">
-                                        +27 79 549 1195
+                                    <a href="tel:+27 (0)10 005 2019">
+                                        +27 (0)10 005 2019
                                     </a>
                                     <i className="icon-circle"></i>
                                 </div>
@@ -70,7 +70,7 @@ export default function Contact({ data }) {
                                 </div>
 
                             </div>
-                            <div className={styles.group}>
+                            {/* <div className={styles.group}>
                                 <h5>Follow Us</h5>
                                 <div className={styles.social}>
                                     <a href="https://facebook.com/">
@@ -80,7 +80,7 @@ export default function Contact({ data }) {
                                         <i className="icon-linkedin"></i>
                                     </a>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className={styles.form}>
                             <div className={styles.header}>

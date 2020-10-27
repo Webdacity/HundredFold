@@ -27,16 +27,16 @@ export default function Footer() {
                 </div>
                 <div className={styles.divider} />
                 <div className={styles.gridLower}>
-                    <p>© 2020 - Hundredfold (PTY) LTD</p>
+                    <p>© 2020 - Hundredfold Advisory (Pty) Ltd</p>
                     <p>Design &amp; Development by <a target="blank" href="https://webdacity.dev">Webdacity</a></p>
-                    <div className={styles.social}>
+                    {/* <div className={styles.social}>
                         <a href="https://facebook.com/">
                             <i className="icon-facebook"></i>
                         </a>
                         <a href="https://linkedin.com/">
                             <i className="icon-linkedin"></i>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </footer>
