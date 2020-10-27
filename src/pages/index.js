@@ -87,7 +87,8 @@ export default function About({ data }) {
           <p>  We are driven by our efficiency culture that we believe will pay off for clients. </p >
           <p> We believe in respect for our clients and those around us; strong or weak, rich or poor, learned or unlearned, with us or not us. </p >
           <p> We believe in the society we live in and thrive to make it better than we first met it. </p >
-          <p> We believe in collaborations and partnerships. We believe in our culture of multi-experience and multi industry skills and resources. </p >
+          <p> We believe in collaborations and partnerships. </p>
+          <p> We believe in our culture of multi-experience and multi industry skills and resources. </p >
           <p> We believe in local contexts. </p >
           <p> We believe in diversity and inclusivity. </p >
         </ContentGrid>
