@@ -84,7 +84,7 @@ export default function Contact({ data }) {
                         </div>
                         <div className={styles.form}>
                             <div className={styles.header}>
-                                <h3>Send us a Message</h3>
+                                <h3>Send us a message</h3>
                                 <p>Please contact us for further information and enquiries.</p>
                             </div>
                             <form name="contact" method="POST" data-netlify="true">
