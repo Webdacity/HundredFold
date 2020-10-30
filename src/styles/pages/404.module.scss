@@ -1,0 +1,20 @@
+@import "../global.scss";
+
+.section {
+    min-height: 100vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $grey;
+
+    h1 {
+        color: $white;
+        font-family: $heading-font;
+    }
+
+    h4 {
+        color: $green;
+    }
+}

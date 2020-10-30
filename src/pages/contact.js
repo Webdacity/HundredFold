@@ -28,6 +28,7 @@ export default function Contact({ data }) {
                 description: "Get in touch with us to learn more.",
                 canonical: "/"
             }}
+
         >
 
             <Landing image={data.slide} name="contact" slidesText={slidesText} short="Contact Us" multiple={true} />
