@@ -87,7 +87,8 @@ export default function Contact({ data }) {
                                 <h3>Send us a message</h3>
                                 <p>Please contact us for further information and enquiries.</p>
                             </div>
-                            <form name="contact" method="POST" data-netlify="true">
+                            <form name="contact" method="post" data-netlify="true">
+                                <input type="hidden" name="form-name" value="contact" />
                                 <div className={styles.group}>
                                     <label htmlFor="name">Name</label>
                                     <input type="text" name="name" required placeholder="Your Name" />
