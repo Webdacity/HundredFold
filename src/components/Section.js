@@ -25,7 +25,7 @@ export default function Section(props) {
     }
 
     return (
-        <section className={sectionClass}>
+        <section className={sectionClass} id={props.id}>
             <div className="container">
                 <Heading {...props} />
                 {props.children}

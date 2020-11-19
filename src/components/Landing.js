@@ -60,10 +60,9 @@ export default function Landing(props) {
                 slidesToScroll: 1,
                 arrows: false,
                 autoplay: true,
-                autoplaySpeed: 5000,
+                autoplaySpeed: 6000,
                 draggable: true,
                 cssEase: "linear",
-                pauseOnHover: true,
                 swipeToSlide: true
             };
             return (

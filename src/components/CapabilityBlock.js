@@ -16,9 +16,6 @@ export default function ContentGrid(props) {
         styles[props.contentAlign],
     );
 
-    // let description = props.text;
-    // description = description.replace("<br />", <br />)
-
     return (
         <article className={outerClass} id={props.heading}>
             <div className="container">

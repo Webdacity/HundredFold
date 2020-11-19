@@ -4,6 +4,13 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`${__dirname}/src/layouts/index.js`),
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -24,9 +31,18 @@ module.exports = {
         path: `${__dirname}/src/assets/images/`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: [
+          'material icons',
+        ],
+      },
+    }
   ],
   siteMetadata: {
     title: "Hundredfold",
-    author: "Webdacity"
+    author: "Webdacity",
+    siteUrl: `https://www.hundredfold.co.za`,
   },
 }

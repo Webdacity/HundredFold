@@ -22,6 +22,7 @@ export default function Capabilities({ data }) {
         <h1>Delivering value through <span>cost efficiency</span></h1>
     ]
 
+
     return (
         <Layout
             pageMeta={{
@@ -33,8 +34,8 @@ export default function Capabilities({ data }) {
 
             <Landing image={data.slide} name="industry" slidesText={slidesText} short="Our Capabilities" multiple={true} linkTo="/contact" linkText="Get in Touch" />
 
-            <Section heading="Capabilities" theme="dark" >
-                <div className={styles.menuGrid}>
+            <Section heading="Capabilities" theme="dark" id="capabilityMenu">
+                <div className={styles.menuGrid} >
                     {CapabilityData.map((capability, index) => {
                         let anchorLink = `#${capability.name}`;
                         return (
@@ -71,6 +72,12 @@ export default function Capabilities({ data }) {
                     })}
                 </div>
             </section>
+
+            <button className={styles.backToMenuButton}>
+                <a href="#capabilityMenu">
+                    <i className="material-icons">keyboard_arrow_up</i>
+                </a>
+            </button>
 
         </Layout>
     )

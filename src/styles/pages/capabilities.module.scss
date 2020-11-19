@@ -35,3 +35,31 @@
 .section {
     padding: 2rem 0;
 }
+
+.backToMenuButton {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: $green;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: 0.5s ease-out;
+    padding: 0;
+    margin: 0;
+
+    i {
+        color: $light-grey;
+        padding: 0.75rem;
+    }
+
+    &:hover {
+        background-color: $grey;
+
+        i {
+            color: $green;
+        }
+    }
+}
