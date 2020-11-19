@@ -22,6 +22,18 @@ export default function Capabilities({ data }) {
         <h1>Delivering value through <span>cost efficiency</span></h1>
     ]
 
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        const mybutton = document.getElementById("scrollTopButton");
+
+        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
 
     return (
         <Layout
@@ -73,7 +85,7 @@ export default function Capabilities({ data }) {
                 </div>
             </section>
 
-            <button className={styles.backToMenuButton}>
+            <button className={styles.backToMenuButton} id="scrollTopButton">
                 <a href="#capabilityMenu">
                     <i className="material-icons">keyboard_arrow_up</i>
                 </a>
