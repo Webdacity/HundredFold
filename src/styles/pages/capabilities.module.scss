@@ -53,6 +53,10 @@
     i {
         color: $light-grey;
         padding: 0.75rem;
+
+        @media (max-width: 576px) {
+            padding: 0.5rem;
+        }
     }
 
     &:hover {
