@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { graphql } from "gatsby";
 
 
@@ -22,18 +22,20 @@ export default function Capabilities({ data }) {
         <h1>Delivering value through <span>cost efficiency</span></h1>
     ]
 
-    window.onscroll = function () { scrollFunction() };
 
-    function scrollFunction() {
-        const mybutton = document.getElementById("scrollTopButton");
+    useEffect(() => {
+        window.onscroll = function () { scrollFunction() };
 
-        if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-            mybutton.style.display = "block";
-        } else {
-            mybutton.style.display = "none";
+        function scrollFunction() {
+            const mybutton = document.getElementById("scrollTopButton");
+
+            if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
         }
-    }
-
+    })
 
     return (
         <Layout
