@@ -71,7 +71,6 @@ export default function About({ data }) {
           <p>
             These are our convictions, because we have experienced, practiced, and witnessed what works in turning around businesses and organizations towards cost efficiency, credible governance practices, Africa business networking, reliable operating models, financial efficiency and strategic outlook and direction.
           </p>
-          <p>Hundredfold is BBBEE Level 2 company.</p>
         </div>
       </Section>
 
