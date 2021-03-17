@@ -67,10 +67,10 @@
 
         @media (max-width: 768px) {
             flex-direction: column;
-            row-gap: 2rem;
 
             .header {
                 width: 100%;
+                margin-bottom: 2rem;
 
                 h1 {
                     border-width: 3px !important;

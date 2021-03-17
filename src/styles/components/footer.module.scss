@@ -91,7 +91,6 @@ footer {
     @media (max-width: 768px) {
         .grid-upper {
             flex-direction: column;
-            row-gap: 1.5rem;
 
             .nav {
                 width: 100%;
@@ -108,7 +107,6 @@ footer {
     @media (max-width: 576px) {
         .grid-upper {
             flex-direction: column;
-            row-gap: 1.5rem;
 
             .nav {
                 display: none;
@@ -117,7 +115,6 @@ footer {
 
         .grid-lower {
             flex-direction: column;
-            row-gap: 0.25rem;
 
             p:nth-child(1) {
                 order: 2;

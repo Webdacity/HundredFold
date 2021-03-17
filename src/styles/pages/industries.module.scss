@@ -1,8 +1,19 @@
 @import "../global.scss";
 
 .grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: 3rem;
+    column-gap: 3rem;
+    width: 80%;
+    margin: auto;
+
+    @media (max-width: 911px) {
+        width: 90%;
+    }
+
+    @media (max-width: 768px) {
+        width: 100%;
+        grid-template-columns: 1fr
+    }
 }

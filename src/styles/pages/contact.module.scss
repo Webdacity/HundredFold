@@ -66,7 +66,7 @@
                     color: $grey;
                     text-decoration: none;
 
-                    &:hover + i {
+                    &:hover+i {
                         width: 1rem;
                         margin-right: 0.75rem;
                         opacity: 1;
@@ -103,6 +103,7 @@
 
         .header {
             margin-bottom: 2rem;
+
             h3 {
                 color: $white;
                 margin: 0;
@@ -122,10 +123,10 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            row-gap: 2rem;
 
             .group {
                 width: 45%;
+                margin-bottom: 2rem;
 
                 label {
                     text-transform: uppercase;
@@ -196,7 +197,6 @@
 
     @media (max-width: 768px) {
         flex-direction: column;
-        row-gap: 4rem;
 
         .details {
             width: 100%;
